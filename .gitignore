@@ -1,3 +1,6 @@
 Library/
 Temp/
 UnityPackageManager/manifest.json
+GithubDown.sln
+GithubDown.csproj
+GithubDown.Editor.csproj
