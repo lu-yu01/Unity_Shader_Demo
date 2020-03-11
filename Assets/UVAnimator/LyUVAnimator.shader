@@ -1,12 +1,10 @@
-﻿
-
-Shader "Ly/UVAnimator"
+﻿Shader "Ly/UVAnimator"
 {
 	Properties
 	{
 		_Color("Base Color", Color) = (1,1,1,1)
 		_MainTex("Base(RGB)", 2D) = "white" {}
-	   _Speed("Speed",Float) = 10
+	    _Speed("Speed",Float) = 10
 		_SizeX("Col", Float) = 4
 		_SizeY("Row",Float) = 4
 	}
@@ -63,7 +61,7 @@ Shader "Ly/UVAnimator"
 
 		//  Column列    Row行   floor对参数向下取整   _Speed 每秒播放帧的次数
 		float col = floor(_Time.y *_Speed / _SizeX);
-		float row = floor(_Time.y *_Speed - col * _SizeX);
+		float row = floor(_Time.y *_Speed - col * _SizeX); // 转换到左上角为原点
 		uv.x += row * sX;
 		uv.y += col * sY;
 
